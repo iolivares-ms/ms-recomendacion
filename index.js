@@ -26,6 +26,39 @@ ptypes = [{name:"SI | Panamá",pp:50},
 
 function hello(){
     console.log("Hola mundo")
+    fetch("https://6pphj52jjf.execute-api.us-east-2.amazonaws.com/Dev", {
+        method: "POST",
+        body: JSON.stringify({
+          user_info: {
+    demographic: "Hombre 25 años",
+    name: "Isaac Olivares"
+  },
+  products: [
+    {
+      plan: "Vida",
+      segmento: "Masivos",
+      nro: 1,
+      antigüedad: 1
+    },
+    {
+      plan: "Funerario",
+      segmento: "Masivos",
+      nro: 1,
+      antigüedad: 1
+    }
+  ]
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then((response) => response.json())
+        .then((json) => {
+        
+
+            const obj = JSON.parse(json.body);
+            console.log(obj)
+        });
 }
 
 hello()
