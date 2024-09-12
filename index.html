@@ -10,7 +10,7 @@
 <body>
 
     <h1>Recomendación de Pólizas Mercantil Seguros</h1>
-    <p>Uso de inteligencia artificial generativa para crear recomendaciones de pólizas personalizadas</p>
+    <!-- <p>Uso de inteligencia artificial generativa para crear recomendaciones de pólizas personalizadas</p> -->
     
     <div class="flex-row">
         <div class="flex-column"> 
@@ -22,7 +22,66 @@
 
 
     <h1>Demo en vivo</h1>
+    <div class="flex-row">
+        <div class="flex-column user-data">
+            <div class="flex-row">
+                <h2>Nombre:</h2>
+                <input id="nombre" value="Isaac Olivares">
+            </div>
+            <div class="flex-row">
+                <h2>Edad:</h2>
+                <input type="number" style="width: 3rem;" id="edad" value="21">
+            </div>
 
+         
+
+            <div class="flex-row">
+                <h2>Género:</h2>
+                <select name="gender" id="gender">
+                    <optgroup>
+                        <option value="Hombre">Masculino</option>
+                        <option value="Mujer">Femenino</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="flex-row">
+                <h2>Pólizas</h2>
+                
+            </div>
+
+            <div class="grid-container" id="grid">
+               
+                
+                
+                
+            </div>
+            
+        </div>
+
+        <div class="flex-column response">
+            <div class="flex-row">
+                <h2>Recomendación:</h2>
+                <button onclick="updateLoader(true)">Generar</button>
+            </div>
+
+            <div id="loader-container">
+
+            </div>
+            
+            <div id="result-container">
+                <!-- <div class="flex-column">
+                    <div class="flex-row">
+                        
+                        <h2 class="ai-text">Estimado Isaac Olivares, En Mercantil Seguros, siempre buscamos ofrecerte la mejor protección posible para ti y tu bienestar. Felicitaciones por las pólizas que ya posees, como la de automóvil y la de salud, las cuales te brindan una excelente cobertura en tu vida diaria. Sin embargo, queremos recomendarte altamente la Póliza de Renta por Hospitalización, la cual consideramos se complementa perfectamente con tus pólizas actuales. Esta póliza te ofrece una renta diaria durante tu estadía en el hospital, asegurando así un ingreso económico estable en caso de una hospitalización prolongada. Como hombre de 21 años, sabemos que tu salud es una prioridad y esta póliza te brinda la tranquilidad de concentrarte en recuperarte rápidamente, sin preocuparte por los aspectos financieros. Te invitamos a conocer más sobre esta póliza y sus beneficios. Atentamente, Mercantil Seguros</h2>
+                    </div> -->
+
+            </div>
+
+        </div>
+
+        
+    </div>
 
 
     
