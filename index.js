@@ -51,8 +51,8 @@ function showResult(response){
   upgrade = response.final_recomendation.upgrade
   written = response.written_recomendation
   tendency = response.final_recomendation.detail[0]
-  prima = response.final_recomendation.detail[0]
-  cobertura = response.final_recomendation.detail[0]
+  prima = response.final_recomendation.detail[1]
+  cobertura = response.final_recomendation.detail[2]
 
   html = `<div class="flex-column">
                     <div class="flex-row">
@@ -61,9 +61,19 @@ function showResult(response){
                     </div>
                     <div class="flex-row">
                         <h2>Puntaje: </h2>
-                        <h2>${score}</h2>
+                        <h2>${Math.round(score)}</h2>
                     </div>
-
+                    <div class="flex-row">
+                        <h2>Tendencia: </h2>
+                        <h2>${Math.round(tendency)}</h2>
+                        <h2> - </h2>
+                        <h2>Prima: </h2>
+                        <h2>${Math.round(prima)}</h2>
+                        <h2> - </h2>
+                        <h2>Cobertura: </h2>
+                        <h2>${Math.round(cobertura)}</h2>
+                        <h2> - </h2>
+                    </div>
                     
 
                     <div class="flex-row">
